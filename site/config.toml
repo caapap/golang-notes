@@ -1,4 +1,4 @@
-baseURL = "http://go.xargin.com/"
+baseURL = "./"
 languageCode = "en-us"
 title = "Go 语言笔记"
 theme = "book"

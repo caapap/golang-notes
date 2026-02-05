@@ -361,4 +361,3 @@ TEXT runtime∕internal∕atomic·Store(SB), NOSPLIT, $0-12
 	RET
 ```
 
-<img width="330px"  src="https://xargin.com/content/images/2021/05/wechat.png">

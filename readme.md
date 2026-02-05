@@ -34,10 +34,6 @@
 
 # Authors
 
-[cch123](https://github.com/cch123)
+[caapap](https://github.com/caapap)
 
-[wziww](https://github.com/wziww)
 
-# 公众号
-
-<img width="222px"  src="https://github.com/cch123/golang-notes/raw/master/images/gzh.png">

@@ -263,7 +263,7 @@ Go 的 pprof 还提供了 --base 的 flag，能够很直观地帮我们发现不
 
 尽量在栈上分配对象，关于逃逸的规则，可以查看 Go 编译器代码中的逃逸测试部分：
 
-![Pasted-Graphic](http://xargin.com/content/images/2021/03/Pasted-Graphic.png)
+![Pasted-Graphic](./images/2021/03/Pasted-Graphic.png)
 
 查看某个 package 内的逃逸情况，可以使用 build + 全路径的方式，如：
 
@@ -273,7 +273,7 @@ Go 的 pprof 还提供了 --base 的 flag，能够很直观地帮我们发现不
 
 #### 使用 sync.Pool 复用堆上对象
 
-sync.Pool 用出花儿的就是 fasthttp 了，可以看看我之前写的这一篇：[fasthttp 为什么快](http://xargin.com/why-fasthttp-is-fast-and-the-cost-of-it/)。
+sync.Pool 用出花儿的就是 fasthttp 了，可以参考这一篇：[fasthttp 为什么快](https://xargin.com/why-fasthttp-is-fast-and-the-cost-of-it/)。
 
 最简单的复用就是复用各种 struct，slice，在复用时 put 时，需要 size 是否已经扩容过头，小心因为 sync.Pool 中存了大量的巨型对象导致进程占用了大量内存。
 
@@ -299,7 +299,7 @@ goroutine 频繁创建与销毁会给调度造成较大的负担，如果我们�
 
 对于网关类系统来说，Go 的内存占用主要是因为 Go 独特的抽象模型造成的，这个很好理解：
 
-![Pasted-Graphic-1](http://xargin.com/content/images/2021/03/Pasted-Graphic-1.png)
+![Pasted-Graphic-1](./images/2021/03/Pasted-Graphic-1.png)
 
 海量的连接加上海量的 goroutine，使网关和 mesh 成为 Go OOM 的重灾区。所以网关侧的优化一般就是优化：
 
@@ -314,7 +314,7 @@ goroutine 频繁创建与销毁会给调度造成较大的负担，如果我们�
 
 ### 锁冲突严重，导致吞吐量瓶颈
 
-我在 [几个 Go 系统可能遇到的锁问题](http://xargin.com/lock-contention-in-go/) 中分享过实际的线上 case。
+在 [几个 Go 系统可能遇到的锁问题](https://xargin.com/lock-contention-in-go/) 中分享过实际的线上 case。
 
 进行锁优化的思路无非就一个“拆”和一个“缩”字：
 
@@ -347,7 +347,7 @@ goroutine 频繁创建与销毁会给调度造成较大的负担，如果我们�
 -   做 ToB 生意，我们的应用是部署在客户侧(比如一些数据库产品)，客户说我们的应用会 OOM，但是我们很难拿到 OOM 的现场，不知道到底是哪些对象分配导致了 OOM
 -   做大型平台，平台上有各种不同类型的用户编写代码，升级用户代码后，线上出现各种 CPU 毛刺和 OOM 问题
 
-这些问题在压测中是发现不了的，需要有更为灵活的工具和更为强大的平台，关于这些问题，我将在 4 月 10 日的武汉 Gopher Meetup 上进行分享，欢迎关注。
+这些问题在压测中是发现不了的，需要有更为灵活的工具和更为强大的平台，关于这些问题，将在相关技术会议上进行分享，欢迎关注。
 
 参考资料：
 

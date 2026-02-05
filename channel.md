@@ -707,4 +707,3 @@ Q: 如果有多个channel同时唤醒同一个goroutine，这个并发控制是�
 Q: 为什么向 channel 发数据的时候，会直接把数据从一个 goroutine 的栈拷贝到另一个 goroutine 的栈？
 
 
-<img width="330px"  src="https://xargin.com/content/images/2021/05/wechat.png">

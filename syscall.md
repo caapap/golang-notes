@@ -770,4 +770,3 @@ func entersyscall_gcwait() {
 
 4. https://blog.csdn.net/luozhaotian/article/details/79609077
 
-<img width="330px"  src="https://xargin.com/content/images/2021/05/wechat.png">

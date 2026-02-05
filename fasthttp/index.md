@@ -102,7 +102,7 @@ func (s *Server) serveConn(c net.Conn) (err error) {
 }
 ```
 
-在整个 serve 流程中，几乎所有对象全部都进行了重用，ctx(其中有 Request 和 Response 结构)，reader，writer，body read buffer。可见作者对于内存重用到达了偏执的程度。
+在整个 serve 流程中，几乎所有对象全部都进行了重用，ctx(其中有 Request 和 Response 结构)，reader，writer，body read buffer。可见其对于内存重用到达了极高的程度。
 
 同时，对于 header 的处理，rawHeaders 是个大 byte 数组。解析后的 header 的 value 如果是字符串类型，其实都是指向这个大 byte 数组的，不会重复生成很多小对象：
 

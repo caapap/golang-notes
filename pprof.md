@@ -775,4 +775,3 @@ runtime 自带的 pprof 已经在数据采集的准确性, 覆盖率, 压力等�
 # 参考资料
 https://go-review.googlesource.com/c/go/+/299671
 
-<img width="330px"  src="https://xargin.com/content/images/2021/05/wechat.png">

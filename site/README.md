@@ -1,3 +1,3 @@
 # golang
 
-source of go.xargin.com
+source of golang-notes
